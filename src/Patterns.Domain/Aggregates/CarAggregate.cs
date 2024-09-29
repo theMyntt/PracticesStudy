@@ -30,7 +30,7 @@ public class CarAggregate
         UpdatedAt = GenerateTimestamp.Perform();
     }
 
-    public CarAggregate(Guid Id, string Corp, string Model, long CreatedAt, long UpdatedAt)
+    public CarAggregate(Guid Id, string Corp, string Model, long CreatedAt, long? UpdatedAt)
     {
         this.Id = Id;
         this.Corp = Corp;
