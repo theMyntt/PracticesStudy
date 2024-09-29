@@ -17,6 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Domain", "src\Patt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Infra.Ioc", "src\Patterns.Infra.Ioc\Patterns.Infra.Ioc.csproj", "{5C7B5C54-AC43-4F4F-BFAF-A5B48C2F508E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Web", "src\Patterns.Web\Patterns.Web.csproj", "{301D321E-D895-49F4-B5A9-68D08BE5F545}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{14769201-BBA0-415A-8D8B-E10928954FEB}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +34,7 @@ Global
 		{1E3CFA98-F0D2-4AD9-AC00-36E7B175582C} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 		{DB19B8EC-D168-4B80-9B16-41F0F0D77821} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 		{5C7B5C54-AC43-4F4F-BFAF-A5B48C2F508E} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
+		{301D321E-D895-49F4-B5A9-68D08BE5F545} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2070D74A-4D63-4917-9D8E-E8AAD8383F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -45,5 +53,9 @@ Global
 		{5C7B5C54-AC43-4F4F-BFAF-A5B48C2F508E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C7B5C54-AC43-4F4F-BFAF-A5B48C2F508E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C7B5C54-AC43-4F4F-BFAF-A5B48C2F508E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{301D321E-D895-49F4-B5A9-68D08BE5F545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{301D321E-D895-49F4-B5A9-68D08BE5F545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{301D321E-D895-49F4-B5A9-68D08BE5F545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{301D321E-D895-49F4-B5A9-68D08BE5F545}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

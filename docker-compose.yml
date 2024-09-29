@@ -1,0 +1,6 @@
+﻿services:
+  patterns.web:
+    image: patterns.web
+    build:
+      context: .
+      dockerfile: src/Patterns.Web/Dockerfile
