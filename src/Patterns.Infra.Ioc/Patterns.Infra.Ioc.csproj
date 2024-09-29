@@ -6,4 +6,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Modules\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Patterns.Application\Patterns.Application.csproj" />
+      <ProjectReference Include="..\Patterns.Domain\Patterns.Domain.csproj" />
+      <ProjectReference Include="..\Patterns.Infra.Data\Patterns.Infra.Data.csproj" />
+    </ItemGroup>
+
 </Project>
