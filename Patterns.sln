@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{AC56D8C4-7
 		docs\AppFlow.drawio.png = docs\AppFlow.drawio.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Console", "src\Patterns.Console\Patterns.Console.csproj", "{B268193E-D055-4A54-B161-1D1C5C6BBAE5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Infra.Data", "src\Patterns.Infra.Data\Patterns.Infra.Data.csproj", "{2070D74A-4D63-4917-9D8E-E8AAD8383F22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Application", "src\Patterns.Application\Patterns.Application.csproj", "{1E3CFA98-F0D2-4AD9-AC00-36E7B175582C}"
@@ -25,17 +23,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B268193E-D055-4A54-B161-1D1C5C6BBAE5} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 		{2070D74A-4D63-4917-9D8E-E8AAD8383F22} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 		{1E3CFA98-F0D2-4AD9-AC00-36E7B175582C} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 		{DB19B8EC-D168-4B80-9B16-41F0F0D77821} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 		{5C7B5C54-AC43-4F4F-BFAF-A5B48C2F508E} = {1D0F9EBA-EDEF-4B99-B589-385340CA841D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B268193E-D055-4A54-B161-1D1C5C6BBAE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B268193E-D055-4A54-B161-1D1C5C6BBAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B268193E-D055-4A54-B161-1D1C5C6BBAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B268193E-D055-4A54-B161-1D1C5C6BBAE5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2070D74A-4D63-4917-9D8E-E8AAD8383F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2070D74A-4D63-4917-9D8E-E8AAD8383F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2070D74A-4D63-4917-9D8E-E8AAD8383F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
