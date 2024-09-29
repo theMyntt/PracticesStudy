@@ -21,6 +21,7 @@ internal static class InfrastructureExtensions
         });
 
         services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+        services.AddScoped<ICarRepository, CarRepository>();
         
         return services;
     }
