@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Patterns.Infra.Data.Abstractions;
 using Patterns.Infra.Data.Context;
+using Patterns.Infra.Data.Repositories;
 
 namespace Patterns.Infra.Ioc.Modules;
 
@@ -17,6 +19,8 @@ internal static class InfrastructureExtensions
                 ServerVersion.AutoDetect(ConnectionString), 
                 mysql => mysql.MigrationsAssembly(typeof(DatabaseContext).Assembly.FullName));
         });
+
+        services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
         
         return services;
     }
