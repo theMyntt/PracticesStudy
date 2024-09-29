@@ -19,4 +19,23 @@ public class CarAggregate
         CreatedAt = GenerateTimestamp.Perform();
         UpdatedAt = null;
     }
+
+    public CarAggregate(Guid Id, string Corp, string Model, long CreatedAt)
+    {
+        this.Id = Id;
+        this.Corp = Corp;
+        this.Model = Model;
+        this.CreatedAt = CreatedAt;
+
+        UpdatedAt = GenerateTimestamp.Perform();
+    }
+
+    public CarAggregate(Guid Id, string Corp, string Model, long CreatedAt, long UpdatedAt)
+    {
+        this.Id = Id;
+        this.Corp = Corp;
+        this.Model = Model;
+        this.CreatedAt = CreatedAt;
+        this.UpdatedAt = UpdatedAt;
+    }
 }
