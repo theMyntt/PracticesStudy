@@ -11,8 +11,4 @@
       <ProjectReference Include="..\Patterns.Infra.Data\Patterns.Infra.Data.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Mappers\" />
-    </ItemGroup>
-
 </Project>
