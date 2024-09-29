@@ -5,6 +5,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4EDE840F-957A-46F2-B97F-31CD3DDC4825}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{AC56D8C4-71C0-4BD7-BBB3-0C3C192A4C71}"
+	ProjectSection(SolutionItems) = preProject
+		docs\AppFlow.drawio.png = docs\AppFlow.drawio.png
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Console", "src\Patterns.Console\Patterns.Console.csproj", "{B268193E-D055-4A54-B161-1D1C5C6BBAE5}"
 EndProject
