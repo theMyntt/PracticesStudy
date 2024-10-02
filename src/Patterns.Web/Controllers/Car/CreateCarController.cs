@@ -5,6 +5,7 @@ using Patterns.Application.DTOs.Car;
 namespace Patterns.Web.Controllers.Car;
 
 [ApiController]
+[Tags("Car")]
 [Route("/api/car/")]
 public class CreateCarController : ControllerBase
 {

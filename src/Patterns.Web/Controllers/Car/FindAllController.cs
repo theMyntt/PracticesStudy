@@ -6,6 +6,7 @@ using Patterns.Application.DTOs.Car;
 namespace Patterns.Web.Controllers.Car
 {
     [Route("api/car")]
+    [Tags("Car")]
     [ApiController]
     public class FindAllController : ControllerBase
     {
