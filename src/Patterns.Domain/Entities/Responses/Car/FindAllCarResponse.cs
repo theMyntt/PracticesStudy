@@ -10,5 +10,7 @@ namespace Patterns.Domain.Entities.Responses.Car
     public class FindAllCarResponse : StandardResponse
     {
         public IEnumerable<CarAggregate>? Cars { get; set; }
+        public int Page { get; set; }
+        public int InPage { get; set; }
     }
 }

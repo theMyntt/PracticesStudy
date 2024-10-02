@@ -48,6 +48,8 @@ namespace Patterns.Application.UseCases.Car
                 return new FindAllCarResponse
                 {
                     Cars = cars,
+                    Page = input.page,
+                    InPage = cars.Count,
                     Message = "Cars Found",
                     StatusCode = 200,
                 };
