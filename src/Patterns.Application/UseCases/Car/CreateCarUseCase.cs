@@ -18,7 +18,7 @@ public class CreateCarUseCase : ICreateCarUseCase
         _repository = repository;
         _mapper = mapper;
     }
-    
+
     public async Task<OneOf<CreateCarResponse, StandardResponse>> Run(CreateCarDTO input)
     {
         var aggregate = new CarAggregate(input.Corp, input.Model);
@@ -27,12 +27,25 @@ public class CreateCarUseCase : ICreateCarUseCase
         {
             await _repository.SaveAsync(_mapper.ToPersistance(aggregate));
 
-            return new CreateCarResponse {
+            return new CreateCarResponse
+            {
                 Message = "Created.",
                 StatusCode = 201
             };
-        } catch(Exception)
+        }
+        catch (Exception e)
         {
+
+            if (e.InnerException != null && e.InnerException.Message.Contains("duplicate entry", StringComparison.CurrentCultureIgnoreCase))
+            {
+                return new StandardResponse
+                {
+                    Message = "Car already exists.",
+                    StatusCode = 409
+                };
+            }
+
+
             return new StandardResponse
             {
                 Message = "Internal Server Error",
