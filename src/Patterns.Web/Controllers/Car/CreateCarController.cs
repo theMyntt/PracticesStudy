@@ -16,7 +16,10 @@ public class CreateCarController : ControllerBase
     public async Task<IActionResult> Perform([FromBody] CreateCarDTO input)
     {
         var result = await _useCase.Run(input);
-        
-        return StatusCode(201, result.AsT0);
+
+        if (result.IsT1)
+            return StatusCode(result.AsT1.StatusCode, result.AsT1);
+
+        return StatusCode(result.AsT0.StatusCode, result.AsT0);
     }
 }

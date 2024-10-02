@@ -3,6 +3,7 @@ using Patterns.Application.Abstractions;
 using Patterns.Application.DTOs.Car;
 using Patterns.Domain.Aggregates;
 using Patterns.Domain.Entities;
+using Patterns.Domain.Entities.Responses.Car;
 using Patterns.Infra.Data.Abstractions;
 
 namespace Patterns.Application.UseCases.Car;
@@ -18,16 +19,25 @@ public class CreateCarUseCase : ICreateCarUseCase
         _mapper = mapper;
     }
     
-    public async Task<OneOf<StandardResponse, StandardResponse>> Run(CreateCarDTO input)
+    public async Task<OneOf<CreateCarResponse, StandardResponse>> Run(CreateCarDTO input)
     {
         var aggregate = new CarAggregate(input.Corp, input.Model);
 
-        await _repository.SaveAsync(_mapper.ToPersistance(aggregate));
-        
-        return OneOf<StandardResponse, StandardResponse>.FromT0(new StandardResponse
+        try
         {
-            Message = "Created.",
-            StatusCode = 201
-        });
+            await _repository.SaveAsync(_mapper.ToPersistance(aggregate));
+
+            return new CreateCarResponse {
+                Message = "Created.",
+                StatusCode = 201
+            };
+        } catch(Exception)
+        {
+            return new StandardResponse
+            {
+                Message = "Internal Server Error",
+                StatusCode = 500
+            };
+        }
     }
 }
