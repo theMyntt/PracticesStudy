@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Patterns.Application.UseCases.Car
 {
-    internal class FindAllUseCase : IFindAllCarUseCase
+    public class FindAllUseCase : IFindAllCarUseCase
     {
         private readonly ICarRepository _repository;
         private readonly ICarMapper _mapper;
