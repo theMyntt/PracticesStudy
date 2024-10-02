@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Patterns.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Patterns.Domain.Entities.Responses.Car
+namespace Patterns.Application.Responses.Car
 {
     public class CreateCarResponse : StandardResponse
     {

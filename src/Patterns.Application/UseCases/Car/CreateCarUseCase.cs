@@ -1,6 +1,7 @@
 using OneOf;
 using Patterns.Application.Abstractions;
 using Patterns.Application.DTOs.Car;
+using Patterns.Application.Responses.Car;
 using Patterns.Domain.Aggregates;
 using Patterns.Domain.Entities;
 using Patterns.Domain.Entities.Responses.Car;
