@@ -29,6 +29,7 @@ public class CreateCarUseCase : ICreateCarUseCase
 
             return new CreateCarResponse
             {
+                Id = aggregate.Id,
                 Message = "Created.",
                 StatusCode = 201
             };
