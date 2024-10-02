@@ -12,9 +12,9 @@ public class CarAggregate
 
     public CarAggregate(string Corp, string Model)
     {
-        this.Corp = Corp;
-        this.Model = Model;
-        
+        this.Corp = Corp.ToUpper();
+        this.Model = Model.ToUpper();
+
         Id = Guid.NewGuid();
         CreatedAt = GenerateTimestamp.Perform();
         UpdatedAt = null;
@@ -23,8 +23,8 @@ public class CarAggregate
     public CarAggregate(Guid Id, string Corp, string Model, long CreatedAt)
     {
         this.Id = Id;
-        this.Corp = Corp;
-        this.Model = Model;
+        this.Corp = Corp.ToUpper();
+        this.Model = Model.ToUpper();
         this.CreatedAt = CreatedAt;
 
         UpdatedAt = GenerateTimestamp.Perform();
@@ -33,8 +33,8 @@ public class CarAggregate
     public CarAggregate(Guid Id, string Corp, string Model, long CreatedAt, long? UpdatedAt)
     {
         this.Id = Id;
-        this.Corp = Corp;
-        this.Model = Model;
+        this.Corp = Corp.ToUpper();
+        this.Model = Model.ToUpper();
         this.CreatedAt = CreatedAt;
         this.UpdatedAt = UpdatedAt;
     }
