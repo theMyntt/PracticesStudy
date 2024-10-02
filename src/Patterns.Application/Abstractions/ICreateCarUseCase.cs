@@ -1,7 +1,6 @@
 using Patterns.Application.DTOs.Car;
 using Patterns.Application.Responses.Car;
 using Patterns.Domain.Entities;
-using Patterns.Domain.Entities.Responses.Car;
 
 namespace Patterns.Application.Abstractions;
 
