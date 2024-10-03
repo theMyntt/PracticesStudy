@@ -5,6 +5,7 @@ using Patterns.Application.Abstractions;
 namespace Patterns.Web.Controllers.Car
 {
     [Route("api/car")]
+    [Tags("Car")]
     [ApiController]
     public class FindOneCarController : ControllerBase
     {
