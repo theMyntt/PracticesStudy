@@ -38,12 +38,9 @@ namespace Patterns.Application.UseCases.Car
             try
             {
                 var entities = await _repository.FindAllAsync(input.page - 1, input.limit);
-                List<CarAggregate> cars = [];
-
-                foreach (var item in entities)
-                {
-                    cars.Add(_mapper.ToDomain(item));
-                }
+                var cars = entities
+                    .Select(entity => _mapper.ToDomain(entity))
+                    .ToList();
 
                 return new FindAllCarResponse
                 {
