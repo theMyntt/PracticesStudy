@@ -26,15 +26,6 @@ namespace Patterns.Application.UseCases.Car
 
         public async Task<OneOf<FindAllCarResponse, StandardResponse>> Run(FindAllDTO input)
         {
-            if (input.limit > 15)
-            {
-                return new StandardResponse
-                {
-                    Message = "Limit cant be greater than 15",
-                    StatusCode = 400
-                };
-            }
-
             try
             {
                 var entities = await _repository.FindAllAsync(input.page - 1, input.limit);
