@@ -34,4 +34,9 @@ public class CarRepository : ICarRepository
     {
         return await _repository.CountAsync();
     }
+
+    public async Task<Car?> FindOneAsync(Expression<Func<Car, bool>> filter)
+    {
+        return await _repository.FindOneAsync(filter);
+    }
 }
