@@ -10,4 +10,5 @@ public interface IBaseRepository<T>
     Task<T?> FindOneAsync(Expression<Func<T, bool>> filter);
     Task DeleteAsync(Expression<Func<T, bool>> filter);
     Task EditAsync(T input);
+    Task<int> CountAsync();
 }

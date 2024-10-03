@@ -58,4 +58,9 @@ public class BaseRepository<T> : IBaseRepository<T> where T : class
         _table.Update(input);
         await _context.SaveChangesAsync();
     }
+
+    public async Task<int> CountAsync()
+    {
+        return await _table.CountAsync();
+    }
 }

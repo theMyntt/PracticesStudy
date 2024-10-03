@@ -9,4 +9,5 @@ public interface ICarRepository
     Task SaveAsync(Car input);
     Task DeleteAsync(Expression<Func<Car, bool>> filter);
     Task EditAsync(Car input);
+    Task<int> CountAsync();
 }

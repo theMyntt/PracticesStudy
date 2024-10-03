@@ -29,4 +29,9 @@ public class CarRepository : ICarRepository
     {
         await _repository.EditAsync(input);
     }
+
+    public async Task<int> CountAsync()
+    {
+        return await _repository.CountAsync();
+    }
 }
