@@ -13,5 +13,6 @@ namespace Patterns.Application.Responses.Car
         public IEnumerable<CarAggregate>? Cars { get; set; }
         public int Page { get; set; }
         public int InPage { get; set; }
+        public int TotalPages { get; set; }
     }
 }

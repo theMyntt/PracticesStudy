@@ -42,11 +42,14 @@ namespace Patterns.Application.UseCases.Car
                     .Select(entity => _mapper.ToDomain(entity))
                     .ToList();
 
+                var total = await _repository.CountAsync();
+
                 return new FindAllCarResponse
                 {
                     Cars = cars,
                     Page = input.page,
                     InPage = cars.Count,
+                    TotalPages = (int)Math.Ceiling((double)total / input.limit),
                     Message = "Cars Found",
                     StatusCode = 200,
                 };
