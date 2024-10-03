@@ -8,11 +8,11 @@ namespace Patterns.Web.Controllers.Car
     [Route("api/car")]
     [Tags("Car")]
     [ApiController]
-    public class FindAllController : ControllerBase
+    public class FindAllCarController : ControllerBase
     {
         private readonly IFindAllCarUseCase _useCase;
 
-        public FindAllController(IFindAllCarUseCase useCase) => _useCase = useCase;
+        public FindAllCarController(IFindAllCarUseCase useCase) => _useCase = useCase;
 
         [HttpGet]
         public async Task<IActionResult> Perform([FromQuery] FindAllDTO input)
