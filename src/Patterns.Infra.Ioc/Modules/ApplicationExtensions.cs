@@ -11,7 +11,7 @@ internal static class ApplicationExtensions
     {
         services.AddScoped<ICarMapper, CarMapper>();
         services.AddScoped<ICreateCarUseCase, CreateCarUseCase>();
-        services.AddScoped<IFindAllCarUseCase, FindAllUseCase>();
+        services.AddScoped<IFindAllCarUseCase, FindAllCarUseCase>();
         
         return services;
     }

@@ -13,12 +13,12 @@ using System.Threading.Tasks;
 
 namespace Patterns.Application.UseCases.Car
 {
-    public class FindAllUseCase : IFindAllCarUseCase
+    public class FindAllCarUseCase : IFindAllCarUseCase
     {
         private readonly ICarRepository _repository;
         private readonly ICarMapper _mapper;
 
-        public FindAllUseCase(ICarRepository repository, ICarMapper mapper)
+        public FindAllCarUseCase(ICarRepository repository, ICarMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
